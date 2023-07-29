@@ -20,7 +20,7 @@ This is a web application for managing employee reviews. It allows administrator
 
 ## Getting Started
 
-1. Clone the repository: `git clone ----------------`
+1. Clone the repository: `git clone https://github.com/KKBhati07/Employee-Review-System.git`
 2. Install the dependencies: `npm install`
 3. Start the server: `node index.js`
 4. Open the application in your web browser: `http://localhost:3200`
