@@ -1,12 +1,10 @@
 /* Declaring variables to root */
 :root {
     --fontColor: rgb(255, 255, 255);
-    --fontFamily: Trebuchet MS;
     --fontFamily: Consolas;
     --itemColor: rgb(82, 82, 82);
     --headerColor: rgb(21, 133, 114);
     --backgroundColor: rgb(128, 128, 128);
-    --backgroundColor: rgb(39, 37, 37);
     --borderColor: rgb(255, 255, 255);
     --formColor: rgb(86, 153, 142);
     --buttonColor: rgb(21, 133, 114);

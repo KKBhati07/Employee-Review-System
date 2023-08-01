@@ -30,7 +30,6 @@ module.exports.create = async (req, res) => {
 
 
     } catch (error) {
-        console.log(error);
         return res.status(500).json({ message: "Internal Server Error" });
 
     }
@@ -84,7 +83,6 @@ module.exports.destroy = async (req, res) => {
         return res.status(401).json({ message: "Unauthorized" });
         //if something goes wrong
     } catch (error) {
-        console.log(error);
         return res.status(500).json({ message: "Internal Server Error" });
 
     }
@@ -107,7 +105,6 @@ module.exports.update = async (req, res) => {
         
         // if something else goes wrong
     } catch (error) {
-        console.log(error);
         req.flash('error',"Unable to update, try again");
         return res.redirect("back");
 

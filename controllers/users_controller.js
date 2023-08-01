@@ -62,7 +62,6 @@ module.exports.create = async (req, res) => {
     } catch (error) {
         //to notify the user
         req.flash("error", "Error while signing up, please try again");
-        console.log("error in signing up", error);
         return res.redirect("back");
     }
 
@@ -141,7 +140,6 @@ module.exports.fetchAll = async (req, res) => {
 
 //to toggle the admin
 module.exports.toggleAdmin = async (req, res) => {
-    console.log("toggleAdmin");
     try {
         //putting another check to make sure only admin can make another employee admin
         if (req.xhr && req.user.isAdmin) {
@@ -162,7 +160,6 @@ module.exports.toggleAdmin = async (req, res) => {
 
         //if something else goes wrong
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             message: "Internal Server Error"
         });
@@ -237,7 +234,6 @@ module.exports.destroy = async (req, res) => {
 
         //if something else goes wrong
     } catch (error) {
-        console.log(error);
         return res.status(500).json({
             message: "Internal Server Error"
         });

@@ -33,7 +33,6 @@ module.exports.home = async (req, res) => {
         });
 
     } catch (error) {
-        console.log(error);
         req.logout((error) => {
         });
         return res.redirect("/");
