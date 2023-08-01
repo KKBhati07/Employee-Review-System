@@ -1,8 +1,10 @@
 // importing mongoose
 const mongoose = require('mongoose');
 
+const mongoUri=process.env.MONGO_URI || "mongodb://127.0.0.1:/ers_database"
+
 // creating database
-mongoose.connect("mongodb://127.0.0.1:/ers_database");
+mongoose.connect(mongoUri);
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "Error connecting to database"));
 db.once("open", () => {
