@@ -24,6 +24,9 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const flash = require("connect-flash");
 const flashMiddleware = require("./config/flash_middleware");
 
+//declaring mongo uri
+const mongoUri=process.env.MONGO_URI || "mongodb://127.0.0.1:/ers_database"
+
 
 //using decoder for post requests
 app.use(express.urlencoded({extended:true}));
@@ -51,7 +54,7 @@ app.set("views","./views");
 
 //setting up mongo store
 const store = new MongoDBStore({
-  uri: 'mongodb://127.0.0.1:27017/ers_database',
+  uri: mongoUri,
   collection: 'sessions'
 });
 store.on('error', function (error) {
